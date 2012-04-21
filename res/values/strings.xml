@@ -17,10 +17,10 @@
     <string name="button_a">(A) Dismiss</string>
     <string name="button_b">(B) No dismiss</string>
 
-    <string name="tab_a">My Photos</string>
-    <string name="tab_b">My Friends</string>
-    <string name="tab_c">Home</string>
-    <string name="tab_d">Local Media</string>
+    <string name="tab_a">Who ?</string>
+    <string name="tab_b">What ?</string>
+    <string name="tab_c">Before ?</string>
+    
 
     <string name="list_a">Lincoln</string>
     <string name="list_b">Obama</string>

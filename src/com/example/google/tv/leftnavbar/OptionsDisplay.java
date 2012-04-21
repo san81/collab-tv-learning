@@ -25,6 +25,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.google.tv.leftnavbar.demo.R;
+
 /**
  * Manages the visual cues related to the options menu.
  */
@@ -73,9 +75,9 @@ class OptionsDisplay {
                 R.layout.leftnav_bar_options, parent, false);
         View menuOption = mView.findViewById(R.id.menu);
 
-        configureOption(menuOption,
+       /* configureOption(menuOption,
                 mContext.getResources().getString(R.string.lib_leftnav_bar_option_label),
-                true);
+                true);*/
         menuOption.setClickable(true);
         menuOption.setFocusable(true);
         menuOption.setOnClickListener(new View.OnClickListener() {

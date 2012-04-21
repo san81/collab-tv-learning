@@ -18,10 +18,10 @@
 	
 	<uses-sdk android:minSdkVersion="11" android:targetSdkVersion="12" />
 	
-	<application android:label="LeftNavBarDemo" android:icon="@drawable/app_icon"
+	<application android:label="CollabTvDemo" android:icon="@drawable/app_icon"
 		android:logo="@drawable/app_logo" android:theme="@android:style/Theme.NoTitleBar">
 
-		<activity android:name="LeftNavbarActivity" android:label="LeftNavBarDemo"
+		<activity android:name="CollabTvDemoActivity" android:label="CollabTvDemo"
 			android:icon="@drawable/activity_icon" android:launchMode="singleTask"
 			android:theme="@android:style/Theme.Holo.NoActionBar"
 			android:taskAffinity="">

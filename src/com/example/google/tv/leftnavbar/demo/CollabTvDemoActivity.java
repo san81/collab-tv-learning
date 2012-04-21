@@ -45,7 +45,7 @@ import com.example.google.tv.leftnavbar.LeftNavBarService;
 /**
  * Exercises the LeftNavBar API.
  */
-public class LeftNavbarActivity extends BaseActivity {
+public class CollabTvDemoActivity extends BaseActivity {
 
     private static final ActionBar.TabListener BLANK_LISTENER = new ActionBar.TabListener() {
         @Override
@@ -178,7 +178,7 @@ public class LeftNavbarActivity extends BaseActivity {
             addCustomTab(bar, R.string.tab_a);
             addCustomTab(bar, R.string.tab_b);
             addCustomTab(bar, R.string.tab_c);
-            addCustomTab(bar, R.string.tab_d);
+            //addCustomTab(bar, R.string.tab_d);
         } else {
             bar.addTab(bar.newTab().setText(R.string.tab_b).setIcon(R.drawable.tab_b)
                     .setTabListener(BLANK_LISTENER), false);
@@ -203,8 +203,8 @@ public class LeftNavbarActivity extends BaseActivity {
             bar.addTab(tab, 0, true);
             bar.addTab(bar.newTab().setText(R.string.tab_c).setIcon(R.drawable.tab_c)
                     .setTabListener(BLANK_LISTENER), false);
-            bar.addTab(bar.newTab().setText(R.string.tab_d).setIcon(R.drawable.tab_d)
-                    .setTabListener(BLANK_LISTENER), false);
+            //bar.addTab(bar.newTab().setText(R.string.tab_d).setIcon(R.drawable.tab_d)
+            //        .setTabListener(BLANK_LISTENER), false);
         }
     }
 
@@ -240,7 +240,7 @@ public class LeftNavbarActivity extends BaseActivity {
     public boolean onKeyUp(int keyCode, KeyEvent event) {
         ActionBar bar = getLeftNavBar();
         View fakeContent = findViewById(R.id.simulated_background);
-        View controls = findViewById(R.id.controls);
+       // View controls = findViewById(R.id.controls);
         switch (keyCode) {
             case KeyEvent.KEYCODE_ESCAPE:
                 setBackground(0 /* controls */);
@@ -269,13 +269,13 @@ public class LeftNavbarActivity extends BaseActivity {
 
     private void setBackground(int image) {
         View fakeContent = findViewById(R.id.simulated_background);
-        View controls = findViewById(R.id.controls);
+        //View controls = findViewById(R.id.controls);
         if (image != 0) {
             fakeContent.setBackgroundResource(image);
             fakeContent.setVisibility(View.VISIBLE);
-            controls.setVisibility(View.GONE);
+            //controls.setVisibility(View.GONE);
         } else {
-            controls.setVisibility(View.VISIBLE);
+           // controls.setVisibility(View.VISIBLE);
             fakeContent.setVisibility(View.GONE);
         }
     }
@@ -289,7 +289,8 @@ public class LeftNavbarActivity extends BaseActivity {
 
     private void setupButtons() {
         final ActionBar bar = getLeftNavBar();
-        findViewById(R.id.button_home_show).setOnClickListener(new View.OnClickListener() {
+        bar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        /*findViewById(R.id.button_home_show).setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -450,7 +451,7 @@ public class LeftNavbarActivity extends BaseActivity {
                 applyCustomParams(params);
             }
         });
-    }
+*/    }
 
     private static final class SpinnerListAdapter extends BaseAdapter {
 
