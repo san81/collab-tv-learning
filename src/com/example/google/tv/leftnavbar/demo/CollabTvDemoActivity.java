@@ -78,11 +78,13 @@ public class CollabTvDemoActivity extends BaseActivity {
     private LeftNavBar getLeftNavBar() {
         if (mLeftNavBar == null) {
             mLeftNavBar = new LeftNavBar(this);
+            mLeftNavBar.setTitle("current tab "+mLeftNavBar.getSelectedTab());
             mLeftNavBar.setOnClickHomeListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     // This is called when the app icon is selected in the left navigation bar
                     // Doing nothing.
+                	 postMessage("Item selected: " + v.getId());
                 }
             });
         }
@@ -290,6 +292,8 @@ public class CollabTvDemoActivity extends BaseActivity {
     private void setupButtons() {
         final ActionBar bar = getLeftNavBar();
         bar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        
+
         /*findViewById(R.id.button_home_show).setOnClickListener(new View.OnClickListener() {
 
             @Override
